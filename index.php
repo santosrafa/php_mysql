@@ -1,3 +1,16 @@
+<?php
+
+//INSERINDO CODIGO PHP
+
+$artigo1 = [
+    'titulo' => 'Primeiros passos com Spring',
+    'conteudo' => 'Na empresa onde trabalho começamos um Coding Dojo, que é basicamente uma reunião com programadores e
+    programadoras a fim de resolver desafios e aperfeiçoar as habilidades com algoritmos.',
+    'link' => 'primeiros-passos-com-spring.html'
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,13 +24,16 @@
     <div id="container">
         <h1>Meu Blog</h1>
         <h2>
-            <a href="primeiros-passos-com-spring.html">
-                Primeiros passos com Spring
+            <a href="<?php $artigo1['link']; ?>">               <!-- CHAMANDO O ARRAY -->
+                <?php
+                    echo $artigo1['titulo'];                    /* CHAMANDO O ARRAY */
+                ?>
             </a>
         </h2>
         <p>
-            Na empresa onde trabalho começamos um Coding Dojo, que é basicamente uma reunião com programadores e
-            programadoras a fim de resolver desafios e aperfeiçoar as habilidades com algoritmos.
+          <?php
+                echo $artigo1['conteudo'];                      /* CHAMANDO O ARRAY */
+          ?>
         </p>
         <h2>
             <a href="o-que-e-metodologia-agil.html">
